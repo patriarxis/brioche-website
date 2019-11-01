@@ -4,6 +4,7 @@
       <h1>{{ title }}</h1>
       <p>{{ msg }}</p>
     </div>
+    <img src="../assets/illustrations/home.svg" alt="">
   </section>
 </template>
 
@@ -22,15 +23,16 @@ export default {
 
   #home {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     place-items: center start;
     height: 100%;
     div {
       position: relative;
-      left: $position;
+      left: $position * 2;
 
       display: grid;
       grid-gap: 20px;
-      width: 700px;
+      width: 80%;
 
       h1 {
         font-size: $font-size * 5;
@@ -40,6 +42,12 @@ export default {
       p {
         font-size: $font-size * 1.2;
       }
+    }
+
+    img {
+      place-self: center;
+      width: 700px;
+      height: 700px;
     }
   }
 </style>

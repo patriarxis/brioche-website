@@ -29,8 +29,12 @@ export default {
 }
 
 a {
-  color: $color;
+  color: $primary-color;
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 html, body {
@@ -41,7 +45,7 @@ html, body {
 }
 
 body {
-  background: url("./assets/home.svg") no-repeat center;
+  background: url("./assets/backgrounds/home.svg") no-repeat center;
   background-size: cover;
 }
 
@@ -53,6 +57,6 @@ body {
   max-width: inherit;
   margin: auto;
 
-  color: $color;
+  color: $primary-color;
 }
 </style>
