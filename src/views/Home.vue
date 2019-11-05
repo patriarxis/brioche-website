@@ -46,8 +46,8 @@ export default {
 
     img {
       place-self: center;
-      width: 700px;
-      height: 700px;
+      width: 70%;
+      height: 70%;
     }
   }
 </style>
