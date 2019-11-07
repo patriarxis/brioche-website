@@ -194,8 +194,8 @@ function getCurrentMonth () {
         transition: inherit;
 
         svg {
-          height: 60px;
-          width: 60px;
+          height: 45px;
+          width: 45px;
 
           transition: inherit;
 
