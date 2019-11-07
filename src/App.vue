@@ -37,6 +37,11 @@ ul {
   list-style: none;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 html, body {
   user-select: none;
   min-height: 920px;

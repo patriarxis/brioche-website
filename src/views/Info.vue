@@ -1,60 +1,73 @@
 <template>
-    <section id="info">
-        <div id="start">
-            <a class="info-element" :href="element.href" :target="element.target"
-            v-bind:key="element.id"
-            v-for="element in elements"
-            @mouseover="hover = true"
-            @mouseleave="hover = false"
-            v-on:click="activate(element)" >
-                <img src="" alt="">
-                <h4>{{ element.title }}</h4>
-                <span>{{ element.description }}</span>
+  <section id="info">
+    <div id="start">
+      <a class="info-element" :href="element.href" :target="element.target"
+      v-bind:key="element.id"
+      v-for="element in elements"
+      @mouseover="hover = true"
+      @mouseleave="hover = false"
+      v-on:click="activate(element)" >
+        <InfoElementImg :id="element.id"/>
+        <h4>{{ element.title }}</h4>
+        <span>{{ element.description }}</span>
 
-                <img src="" alt="" id="link" v-if="element.isLink">
-            </a>
+        <i id="link" class="material-icons" v-if="element.isLink">
+          open_in_new
+        </i>
+      </a>
 
-            <transition name="fade">
-              <div id="background" v-if="hover || active" v-on:click="deactivate"></div>
-            </transition>
+      <transition name="fade">
+        <div id="background" v-if="hover || active" v-on:click="deactivate"></div>
+      </transition>
 
-            <transition name="fade">
-              <div id="schedule-container" class="pop-up" v-if="elements[3].show">
-                <div id="title">
-                  <h2>Schedule</h2>
-                  <span>{{ schedule.month }} {{ schedule.year }}</span>
-                </div>
-                <Schedule/>
-                <img src="" alt="" class="close-container" v-on:click="deactivate">
-              </div>
-            </transition>
-
-            <transition name="fade">
-              <div id="contact" class="pop-up" v-if="elements[1].show || elements[2].show">
-                <h2>Contact</h2>
-                <div>
-                  <img src="" alt="">
-                  <span>{{ elements[1].description }}</span>
-                </div>
-                <div>
-                  <img src="" alt="">
-                  <span>{{ elements[2].description }}</span>
-                </div>
-                <img src="" alt="" class="close-container" v-on:click="deactivate">
-              </div>
-            </transition>
+      <transition name="fade">
+        <div id="schedule-container" class="pop-up" v-if="elements[3].show">
+          <div id="title">
+            <h2>Schedule</h2>
+            <span>{{ schedule.month }} {{ schedule.year }}</span>
+          </div>
+          <Schedule/>
+          <i class="material-icons close-container" v-on:click="deactivate">
+            close
+          </i>
         </div>
-        <img id="info-img" src="../assets/illustrations/info.svg" alt="">
-    </section>
+      </transition>
+
+      <transition name="fade">
+        <div id="contact" class="pop-up" v-if="elements[1].show || elements[2].show">
+          <h2>Contact</h2>
+          <div>
+            <Email />
+            <span>{{ elements[1].description }}</span>
+          </div>
+          <div>
+            <Phone />
+            <span>{{ elements[2].description }}</span>
+          </div>
+          <i class="material-icons close-container" v-on:click="deactivate">
+            close
+          </i>
+        </div>
+      </transition>
+    </div>
+
+    <img id="info-img" src="../assets/illustrations/info.svg" alt="">
+  </section>
 </template>
 
 <script>
 import Schedule from '../components/ui/Schedule.vue'
+import InfoElementImg from '../components/ui/InfoElementImg.vue'
+import Email from '../assets/items/Email.vue'
+import Phone from '../assets/items/Phone.vue'
 
 export default {
   name: 'Info',
   components: {
-    Schedule
+    Schedule,
+    InfoElementImg,
+    Email,
+    Phone
   },
   data () {
     return {
@@ -73,7 +86,7 @@ export default {
           id: 2,
           title: 'Email',
           description: 'Email',
-          href: '#start',
+          href: '#',
           target: '',
           isLink: false,
           show: false
@@ -82,7 +95,7 @@ export default {
           id: 3,
           title: 'Phone number',
           description: 'Phone number',
-          href: '#start',
+          href: '#',
           target: '',
           isLink: false,
           show: false
@@ -91,7 +104,7 @@ export default {
           id: 4,
           title: 'Schedule',
           description: 'Schedule',
-          href: '#start',
+          href: '#',
           target: '',
           isLink: false,
           show: false
@@ -143,7 +156,7 @@ function getCurrentMonth () {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../styles/_variables.scss";
 
 #info {
@@ -177,9 +190,19 @@ function getCurrentMonth () {
 
       transition: .2s ease;
 
-      img {
-        height: 70px;
-        width: 70px;
+      div {
+        transition: inherit;
+
+        svg {
+          height: 60px;
+          width: 60px;
+
+          transition: inherit;
+
+          .st0 {
+            transition: inherit;
+          }
+        }
       }
 
       h4 {
@@ -198,6 +221,8 @@ function getCurrentMonth () {
 
         width: 20px;
         height: 20px;
+
+        color: $secondary-color;
       }
 
       &:hover {
@@ -205,6 +230,10 @@ function getCurrentMonth () {
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 
         z-index: 10;
+      }
+
+      &:hover .st0 {
+        fill: $secondary-color;
       }
 
       &:hover > h4 {
@@ -261,6 +290,10 @@ function getCurrentMonth () {
         display: grid;
         grid-gap: 10px;
         place-items: center;
+
+        h2 {
+          font-size: $font-size * 2;
+        }
       }
     }
 
@@ -279,10 +312,14 @@ function getCurrentMonth () {
         grid-template-columns: auto auto;
         grid-gap: 20px;
 
-        img {
+        svg {
           place-self: center;
-          width: 20px;
-          height: 20px;
+          width: 23px;
+          height: 23px;
+
+          .st0 {
+            fill: $secondary-color;
+          }
         }
       }
     }
@@ -292,8 +329,7 @@ function getCurrentMonth () {
         top: 20px;
         right: 20px;
 
-        width: 30px;
-        height: 30px;
+        font-size: 1.8rem;
 
         cursor: pointer;
       }

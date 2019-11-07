@@ -1,1 +1,85 @@
+<template>
+  <section id="delivery">
+    <div>
+      <h1>Delivery</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel justo lectus.</p>
+      <button>
+          <img src="" alt="">
+      </button>
+      <button>
+          <img src="" alt="">
+      </button>
+      <button>
+          <img src="" alt="">
+      </button>
+    </div>
+  </section>
+</template>
 
+<script>
+export default {
+  name: 'Delivery'
+}
+</script>
+
+<style lang="scss" scoped>
+@import "../styles/_variables.scss";
+
+#delivery {
+  display: grid;
+  justify-items: center;
+
+  div {
+    position: relative;
+    top: 15%;
+
+    display: grid;
+    place-items: center;
+
+    height: 55%;
+
+    h1 {
+      font-size: $font-size * 4;
+    }
+
+    p {
+      align-self: start;
+
+      width: 80%;
+
+      text-align: center;
+      font-size: $font-size * 1.2;
+    }
+
+    button {
+      width: 45%;
+      height: 75%;
+
+      border: 1px solid $primary-color;
+      border-radius: 8px;
+
+      cursor: pointer;
+
+      transition: .2s ease;
+
+      &:hover {
+        width: 55%;
+        height: 90%;
+      }
+
+      &:nth-of-type(1):hover {
+        background: red;
+        border: red;
+      }
+      &:nth-of-type(2):hover {
+        background: red;
+        border: red;
+      }
+      &:nth-of-type(3):hover {
+        background: red;
+        border: red;
+      }
+    }
+  }
+}
+</style>
