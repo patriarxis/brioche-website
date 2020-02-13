@@ -20,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:Screamfull/Screamfull.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:Screamfull/Brioche-Website.git master:gh-pages
+git push -f git@github.com:screamfull/Brioche-Website.git master:gh-pages
 
 cd -

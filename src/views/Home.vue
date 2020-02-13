@@ -21,33 +21,58 @@ export default {
 <style lang="scss" scoped>
 @import "../styles/_variables.scss";
 
-  #home {
+#home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center start;
+  height: 100%;
+
+  div {
+    position: relative;
+    left: $position * 2;
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center start;
-    height: 100%;
+    grid-gap: 20px;
+    width: 80%;
+
+    h1 {
+      font-size: $font-size * 5;
+      font-weight: 900;
+    }
+
+    p {
+      font-size: $font-size * 1.2;
+    }
+  }
+
+  img {
+    place-self: center;
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #home {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
     div {
-      position: relative;
-      left: $position * 2;
+      grid-area: 2 / 1 / 2 / 2;
+      left: 0;
+      top: 40px;
 
-      display: grid;
-      grid-gap: 20px;
-      width: 80%;
+      place-self: start center;
 
-      h1 {
-        font-size: $font-size * 5;
-        font-weight: 900;
-      }
-
-      p {
-        font-size: $font-size * 1.2;
-      }
+      text-align: center;
     }
 
     img {
-      place-self: center;
-      width: 70%;
-      height: 70%;
+      grid-area: 1 / 1 / 1 / 2;
+
+      width: 100%;
+      height: 100%;
     }
   }
+}
 </style>

@@ -174,13 +174,16 @@ function getCurrentMonth () {
     grid-template-rows: 1fr 1fr;
     grid-gap: 50px;
 
+    width: 70%;
+    height: 50%;
+
     .info-element {
       position: relative;
       display: grid;
       place-items: center;
 
-      height: 150px;
-      width: 200px;
+      height: 100%;
+      width: 100%;
 
       padding: 15px 0;
 

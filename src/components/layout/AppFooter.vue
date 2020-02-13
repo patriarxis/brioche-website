@@ -152,4 +152,22 @@ footer {
   }
 }
 
+@media only screen and (max-width: 1050px) {
+  footer {
+    #social {
+      a {
+        svg {
+          height: 15px;
+          width: 15px;
+        }
+
+        &:hover > svg {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
 </style>

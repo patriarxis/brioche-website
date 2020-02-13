@@ -71,6 +71,8 @@ export default {
   place-items: center;
 
   #menu-container {
+    position: relative;
+
     display: grid;
     grid-template-rows: 15% 70% 15%;
     place-items: center;
@@ -85,6 +87,8 @@ export default {
     #category {
       position: absolute;
       left: 10%;
+      top: 50%;
+      transform: translate(0, -50%);
 
       display: grid;
       grid-template-columns: auto auto;

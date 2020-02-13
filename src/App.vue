@@ -47,10 +47,16 @@ html, body {
   min-height: 920px;
   height: 100vh;
   max-width: 2000px;
+
+  margin: auto;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
-  background: url("./assets/backgrounds/home.svg") no-repeat center;
+  background-color: $secondary-color;
   background-size: cover;
 }
 
@@ -63,5 +69,21 @@ body {
   margin: auto;
 
   color: $primary-color;
+}
+
+@media only screen and (max-width: 1050px) {
+  html, body {
+    min-height: 700px;
+  }
+
+  html {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #app {
+    grid-template-rows: 50px auto 50px;
+  }
 }
 </style>
