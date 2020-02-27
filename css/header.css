@@ -1,0 +1,47 @@
+#header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    padding: 0 100px 0 100px;
+}
+  
+#logo {
+    justify-self: start;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 10px;
+    align-items: center;
+}
+
+#logo img {
+    height: 52px;
+    width: 52px;
+}
+
+#logo span {
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+#header nav {
+    justify-self: end;
+
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 10px;
+    place-items: center;
+}
+
+#header nav a {
+    padding: 5px 15px;
+    border-radius: 3px;
+    transition: .15s ease-in;
+}
+
+#header nav a:hover {
+    background-color: #FFD9C0;
+    color: #3F5362;
+    padding: 10px 20px;
+}
