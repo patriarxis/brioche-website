@@ -1,64 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el-GR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    <section id="info">
-        <div id="start">
-          <a class="info-element" :href="element.href" :target="element.target"
-          v-bind:key="element.id"
-          v-for="element in elements"
-          @mouseover="hover = true"
-          @mouseleave="hover = false"
-          v-on:click="activate(element)" >
-            <InfoElementImg :id="element.id"/>
-            <h4>{{ element.title }}</h4>
-            <span>{{ element.description }}</span>
-    
-            <i id="link" class="material-icons" v-if="element.isLink">
-              open_in_new
-            </i>
-          </a>
-    
-          <transition name="fade">
-            <div id="background" v-if="hover || active" v-on:click="deactivate"></div>
-          </transition>
-    
-          <transition name="fade">
-            <div id="schedule-container" class="pop-up" v-if="elements[3].show">
-              <div id="title">
-                <h2>Schedule</h2>
-                <span>{{ schedule.month }} {{ schedule.year }}</span>
-              </div>
-              <Schedule/>
-              <i class="material-icons close-container" v-on:click="deactivate">
-                close
-              </i>
-            </div>
-          </transition>
-    
-          <transition name="fade">
-            <div id="contact" class="pop-up" v-if="elements[1].show || elements[2].show">
-              <h2>Contact</h2>
-              <div>
-                <Email />
-                <span>{{ elements[1].description }}</span>
-              </div>
-              <div>
-                <Phone />
-                <span>{{ elements[2].description }}</span>
-              </div>
-              <i class="material-icons close-container" v-on:click="deactivate">
-                close
-              </i>
-            </div>
-          </transition>
+
+  <section id="info">
+    <div id="start">
+      <a class="info-element" :href="element.href" :target="element.target"
+      v-bind:key="element.id"
+      v-for="element in elements"
+      @mouseover="hover = true"
+      @mouseleave="hover = false"
+      v-on:click="activate(element)" >
+        <InfoElementImg :id="element.id"/>
+        <h4>{{ element.title }}</h4>
+        <span>{{ element.description }}</span>
+
+        <i id="link" class="material-icons" v-if="element.isLink">
+          open_in_new
+        </i>
+      </a>
+
+      <transition name="fade">
+        <div id="background" v-if="hover || active" v-on:click="deactivate"></div>
+      </transition>
+
+      <transition name="fade">
+        <div id="schedule-container" class="pop-up" v-if="elements[3].show">
+          <div id="title">
+            <h2>Schedule</h2>
+            <span>{{ schedule.month }} {{ schedule.year }}</span>
+          </div>
+          <Schedule/>
+          <i class="material-icons close-container" v-on:click="deactivate">
+            close
+          </i>
         </div>
-    
-        <img id="info-img" src="../assets/illustrations/info.svg" alt="">
-      </section>
+      </transition>
+
+      <transition name="fade">
+        <div id="contact" class="pop-up" v-if="elements[1].show || elements[2].show">
+          <h2>Contact</h2>
+          <div>
+            <Email />
+            <span>{{ elements[1].description }}</span>
+          </div>
+          <div>
+            <Phone />
+            <span>{{ elements[2].description }}</span>
+          </div>
+          <i class="material-icons close-container" v-on:click="deactivate">
+            close
+          </i>
+        </div>
+      </transition>
+    </div>
+
+    <img id="info-img" src="../assets/illustrations/info.svg" alt="">
+  </section>
+
 </body>
 </html>
