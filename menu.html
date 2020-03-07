@@ -1,70 +1,121 @@
 <!DOCTYPE html>
 <html lang="el-GR">
 <head>
-  <title>Document</title>
+  <title>Menu</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="resources/css/style.css">
   <link rel="stylesheet" href="resources/css/menu.css">
+  <link rel="stylesheet" href="resources/css/header.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 
+  <section id="header"></section>
+
   <section id="menu">
+    <h1>Menu</h1>
+
+    <div id="categories-container">
+      <ul id="categories">
+        <li class="active"><a href="#">Category 1</a></li>
+        <li><a href="#">Category 2</a></li>
+        <li><a href="#">Category 3</a></li>
+        <li><a href="#">Category 4</a></li>
+        <li><a href="#">Category 5</a></li>
+        <li><a href="#">Category 6</a></li>
+      </ul>
+    </div>
+
     <div id="menu-container">
-      <h1>Menu</h1>
-      <div id="category">
+
+      <div>
+        <h3>Category 1</h3>
+
         <ul>
           <li>
-            <i class="material-icons">
-              phone
-            </i>
-            <span>Coffee</span>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
           </li>
           <li>
-            <i class="material-icons">
-              phone
-            </i>
-            <span>Coffee</span>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
           </li>
           <li>
-            <i class="material-icons">
-              phone
-            </i>
-            <span>Coffee</span>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
           </li>
           <li>
-            <i class="material-icons">
-              menu
-            </i>
-            <span>Coffee</span>
-          </li>
-          <li>
-            <i class="material-icons">
-              menu
-            </i>
-            <span>Coffee</span>
-          </li>
-          <li>
-            <i class="material-icons">
-              menu
-            </i>
-            <span>Coffee</span>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
           </li>
         </ul>
-        <div class="vl"></div>
       </div>
-      <div id="menu-display">
+      
+      <div>
+        <h3>Category 2</h3>
+
         <ul>
-          <li>skr</li>
-          <li>skr</li>
-          <li>skr</li>
-          <li>skr</li>
-          <li>skr</li>
-          <li>skr</li>
+          <li>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
+          </li>
+          <li>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
+          </li>
+          <li>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
+          </li>
+          <li>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Category 3</h3>
+
+        <ul>
+          <li>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
+          </li>
+          <li>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
+          </li>
+          <li>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
+          </li>
+          <li>
+            <span class="name">Item</span>
+            <span class="price">10,00$</span>
+            <span class="description">Description Description Description Description Description Description Description Description </span>
+          </li>
         </ul>
       </div>
     </div>
   </section>
+
+  <script> 
+    $(function(){
+      $("#header").load("../components/header.html");
+    });
+  </script>
 
 </body>
 </html>
