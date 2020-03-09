@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="resources/css/menu.css">
   <link rel="stylesheet" href="resources/css/header.css">
+  <link rel="stylesheet" href="resources/css/footer.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
@@ -13,23 +14,38 @@
   <section id="header"></section>
 
   <section id="menu">
-    <h1>Menu</h1>
+    <h1><strong>Menu</strong></h1>
 
     <div id="categories-container">
       <ul id="categories">
-        <li class="active"><a href="#">Category 1</a></li>
-        <li><a href="#">Category 2</a></li>
-        <li><a href="#">Category 3</a></li>
-        <li><a href="#">Category 4</a></li>
-        <li><a href="#">Category 5</a></li>
-        <li><a href="#">Category 6</a></li>
+        <li class="active">Category 1</li>
+        <li>Category 2</li>
+        <li>Category 3</li>
+        <li>Category 4</li>
+        <li>Category 5</li>
+        <li>Category 6</li>
+        <div class="vl"></div>
+        <li id="dropdown">
+          <span>More</span>
+          <div></div>
+
+          <ul id="dropdown-list">
+            <li>Category 7</li>
+            <li>Category 8</li>
+            <li>Category 9</li>
+            <li>Category 10</li>
+            <li>Category 11</li>
+            <li>Category 12</li>
+            <li>Category 13</li>
+          </ul>
+        </li>
       </ul>
     </div>
 
     <div id="menu-container">
 
       <div>
-        <h3>Category 1</h3>
+        <h2>Category 1</h2>
 
         <ul>
           <li>
@@ -56,7 +72,7 @@
       </div>
       
       <div>
-        <h3>Category 2</h3>
+        <h2>Category 2</h2>
 
         <ul>
           <li>
@@ -83,7 +99,7 @@
       </div>
       
       <div>
-        <h3>Category 3</h3>
+        <h2>Category 3</h2>
 
         <ul>
           <li>
@@ -111,9 +127,12 @@
     </div>
   </section>
 
+  <section id="footer"></section>
+
   <script> 
     $(function(){
       $("#header").load("../components/header.html");
+      $("#footer").load("../components/footer.html");
     });
   </script>
 
