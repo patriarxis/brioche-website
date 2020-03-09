@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html lang="el-GR">
 <head>
-  <title>Document</title>
+  <title>Delivery</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="resources/css/style.css">
   <link rel="stylesheet" href="resources/css/delivery.css">
+  <link rel="stylesheet" href="resources/css/header.css">
+  <link rel="stylesheet" href="resources/css/footer.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 
+  <section id="header"></section>
+
   <section id="delivery">
-    <div>
-      <h1>Delivery</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel justo lectus.</p>
-      <button>
-        <img src="" alt="">
-      </button>
-      <button>
-        <img src="" alt="">
-      </button>
-      <button>
-        <img src="" alt="">
-      </button>
+    <h1><strong>Delivery</strong></h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. In rutrum libero leo, at convallis ex convallis
+      nec. In rutrum libero leo, at convallis ex convallis
+      nec.
+    </p>
+
+    <div id="sites">
+      <a href="#">
+        <img src="/resources/images/icons/new-tab.svg" alt="">
+        <button>site 1</button>
+      </a>
+
+      <a href="#">
+        <img src="/resources/images/icons/new-tab.svg" alt="">
+        <button>site 2</button>
+      </a>
     </div>
   </section>
+
+  <section id="footer"></section>
+
+  <script> 
+    $(function(){
+      $("#header").load("../components/header.html");
+      $("#footer").load("../components/footer.html");
+    });
+  </script>
 
 </body>
 </html>

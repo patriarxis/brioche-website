@@ -1,57 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 217, 192);
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+  min-height: 900px;
+  max-height: 1200px;
+
+  min-width: 1300px;
+  max-width: 2500px;
+  margin: auto;
+  
+  font-size: 20px;
+  color: rgb(255, 217, 192);
+
+  background-color: #3F5362;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 100px auto 100px;
+  
+  background: url(../images/backgrounds/home.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #delivery {
-    display: grid;
-    justify-items: center;
+  display: grid;
+  grid-template-rows: 100px 80px auto;
+  place-items: center;
+}
 
-    div {
-      position: relative;
-      top: 15%;
+#delivery h1 {
+  font-size: 2.5rem;
+}
 
-      display: grid;
-      place-items: center;
+#delivery p {
+  width: 900px;
+  text-align: center;
+}
 
-      height: 55%;
+#sites {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 80px;
+  place-items: center;
+}
 
-      h1 {
-        font-size: $font-size * 4;
-      }
+#sites a {
+  position: relative;
+}
 
-      p {
-        align-self: start;
+#sites a img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 
-        width: 80%;
+  height: 30px;
+  width: 30px;
+}
 
-        text-align: center;
-        font-size: $font-size * 1.2;
-      }
+#sites a button {
+  padding: 30px 0;
+  width: 360px;
 
-      button {
-        width: 45%;
-        height: 75%;
+  background: none;
+  border: 1px solid rgba(255, 217, 192, 0.2);
+  border-radius: 5px;
 
-        border: 1px solid $primary-color;
-        border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: rgb(255, 217, 192);
 
-        cursor: pointer;
+  transition: .2s ease-out;
+}
 
-        transition: .2s ease;
-
-        &:hover {
-          width: 55%;
-          height: 90%;
-        }
-
-        &:nth-of-type(1):hover {
-          background: red;
-          border: red;
-        }
-        &:nth-of-type(2):hover {
-          background: red;
-          border: red;
-        }
-        &:nth-of-type(3):hover {
-          background: red;
-          border: red;
-        }
-      }
-    }
-  }
+#sites a button:hover {
+  background-color: rgb(255, 217, 192);
+  color: #3F5362;
+  border-color: none;
+}
