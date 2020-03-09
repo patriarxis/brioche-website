@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
-    padding: 0 100px 0 100px;
+    padding: 0 100px;
 }
 
 #logo {
@@ -16,12 +16,12 @@
 }
 
 #logo img {
-    height: 52px;
-    width: 52px;
+    height: 50px;
+    width: 50px;
 }
 
 #logo span {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 900;
 }
 
