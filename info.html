@@ -1,68 +1,63 @@
 <!DOCTYPE html>
 <html lang="el-GR">
 <head>
-  <title>Document</title>
+  <title>Info</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="resources/css/style.css">
   <link rel="stylesheet" href="resources/css/info.css">
+  <link rel="stylesheet" href="resources/css/header.css">
+  <link rel="stylesheet" href="resources/css/footer.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 
+  <section id="header"></section>
+
   <section id="info">
-    <div id="start">
-      <a class="info-element" :href="element.href" :target="element.target"
-      v-bind:key="element.id"
-      v-for="element in elements"
-      @mouseover="hover = true"
-      @mouseleave="hover = false"
-      v-on:click="activate(element)" >
-        <InfoElementImg :id="element.id"/>
-        <h4>{{ element.title }}</h4>
-        <span>{{ element.description }}</span>
 
-        <i id="link" class="material-icons" v-if="element.isLink">
-          open_in_new
-        </i>
-      </a>
+    <div id="info-container">
+      <h1><strong>Info</strong></h1>
+      <div id="contact-container">
+        <h2>Contact</h2>
+        <ul>
+          <li>
+            <img src="/resources/images/icons/address.svg" alt="">
+            <span>Address</span>
+          </li>
+          <li>
+            <img src="/resources/images/icons/phone.svg" alt="">
+            <span>2541 181818</span>
+          </li>
+          <li>
+            <img src="/resources/images/icons/email.svg" alt="">
+            <span>example@email.com</span>
+          </li>
+        </ul>
+      </div>
 
-      <transition name="fade">
-        <div id="background" v-if="hover || active" v-on:click="deactivate"></div>
-      </transition>
-
-      <transition name="fade">
-        <div id="schedule-container" class="pop-up" v-if="elements[3].show">
-          <div id="title">
-            <h2>Schedule</h2>
-            <span>{{ schedule.month }} {{ schedule.year }}</span>
-          </div>
-          <Schedule/>
-          <i class="material-icons close-container" v-on:click="deactivate">
-            close
-          </i>
-        </div>
-      </transition>
-
-      <transition name="fade">
-        <div id="contact" class="pop-up" v-if="elements[1].show || elements[2].show">
-          <h2>Contact</h2>
-          <div>
-            <Email />
-            <span>{{ elements[1].description }}</span>
-          </div>
-          <div>
-            <Phone />
-            <span>{{ elements[2].description }}</span>
-          </div>
-          <i class="material-icons close-container" v-on:click="deactivate">
-            close
-          </i>
-        </div>
-      </transition>
+      <div id="schedule-container">
+        <h2>Schedule</h2>
+        <p>Monday-Saturday | 07:00-21:00</p>
+        <button>See full Schedule</button>
+      </div>
     </div>
 
-    <img id="info-img" src="resources/images/illustrations/info.svg" alt="">
+    <img src="/resources/images/illustrations/info.svg" alt="">
+
   </section>
+
+  <div id="schedule">
+    <div></div>
+  </div>
+
+  <section id="footer"></section>
+
+  <script> 
+    $(function(){
+      $("#header").load("../components/header.html");
+      $("#footer").load("../components/footer.html");
+    });
+  </script>
 
 </body>
 </html>

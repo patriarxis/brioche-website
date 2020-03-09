@@ -1,187 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 217, 192);
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+  min-height: 900px;
+  max-height: 1200px;
+
+  min-width: 1300px;
+  max-width: 2500px;
+  margin: auto;
+  
+  font-size: 20px;
+  color: rgb(255, 217, 192);
+
+  background-color: #3F5362;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 100px auto 100px;
+
+  background: url(../images/backgrounds/home.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center start;
-    height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-    #start {
-      position: relative;
-      left: $position * 2;
+#info-container {
+  position: relative;
+  left: 250px;
+  top: 100px;
+  place-self: start start;
 
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-gap: 50px;
+  display: grid;
+  align-items: center;
 
-      width: 70%;
-      height: 50%;
+  width: 300px;
+}
 
-      .info-element {
-        position: relative;
-        display: grid;
-        place-items: center;
+#info-container h1 {
+  font-size: 2rem;
+}
 
-        height: 100%;
-        width: 100%;
+#info-container div {
+  width: 300px;
+}
 
-        padding: 15px 0;
+#info-container div h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
 
-        cursor: pointer;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
 
-        border-radius: 10px;
+#contact-container ul {
+  display: grid;
+  grid-row-gap: 15px;
+}
 
-        transition: .2s ease;
+#contact-container ul li {
+  display: grid;
+  grid-template-columns: 23px auto;
+  grid-column-gap: 20px;
+  align-items: center;
+}
 
-        div {
-          transition: inherit;
+#contact-container ul li img {
+  width: 23px;
+  height: 23px;
+}
 
-          svg {
-            height: 45px;
-            width: 45px;
+#contact-container ul li span, #schedule-container p {
+  font-weight: 100;
+  font-size: 0.9rem;
+}
 
-            transition: inherit;
+#schedule-container button {
+  margin-top: 30px;
+  padding: 20px 40px;
 
-            .st0 {
-              transition: inherit;
-            }
-          }
-        }
+  background: none;
+  border: 1px solid rgba(255, 217, 192, 0.2);
+  border-radius: 4px;
 
-        h4 {
-          transition: inherit;
-        }
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: rgb(255, 217, 192);
 
-        span {
-          font-size: $font-size * 1;
-          transition: inherit;
-        }
+  transition: .13s ease-out;
+}
 
-        #link {
-          position: absolute;
-          top: 10%;
-          right: 10%;
+#schedule-container button:hover {
+  background-color: rgb(255, 217, 192);
+  color: #3F5362;
+}
 
-          width: 20px;
-          height: 20px;
+#info img {
+  align-self: center;
+  width: 700px;
+}
 
-          color: $secondary-color;
-        }
+#schedule {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 
-        &:hover {
-          background-color: $primary-color;
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
-          z-index: 10;
-        }
+#schedule div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-        &:hover .st0 {
-          fill: $secondary-color;
-        }
-
-        &:hover > h4 {
-          color: $secondary-color;
-        }
-
-        &:hover > span {
-          color: $secondary-color;
-        }
-      }
-
-      .fade-enter-active, .fade-leave-active {
-        transition: .15s ease;
-      }
-
-      .fade-enter, .fade-leave-to {
-        opacity: 0;
-      }
-
-      #background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 5;
-
-        height: 100vh;
-        width: 100vw;
-
-        background-color: rgba(0, 0, 0, 0.6);
-      }
-
-      .pop-up {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 20;
-
-        width: 600px;
-        height: 400px;
-
-        border-radius: 20px;
-
-        background: $primary-color;
-
-        color: $secondary-color;
-      }
-
-      #schedule-container {
-        display: grid;
-        place-items: center;
-
-        #title {
-          display: grid;
-          grid-gap: 10px;
-          place-items: center;
-
-          h2 {
-            font-size: $font-size * 2;
-          }
-        }
-      }
-
-      #contact {
-        display: grid;
-        place-items: center;
-
-        padding: 30px 100px 100px 100px;
-
-        h2 {
-          font-size: $font-size * 2;
-        }
-
-        div {
-          display: grid;
-          grid-template-columns: auto auto;
-          grid-gap: 20px;
-
-          svg {
-            place-self: center;
-            width: 23px;
-            height: 23px;
-
-            .st0 {
-              fill: $secondary-color;
-            }
-          }
-        }
-      }
-
-      .close-container {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-
-          font-size: 1.8rem;
-
-          cursor: pointer;
-        }
-    }
-
-    #info-img {
-      position: relative;
-      top: -50px;
-      place-self: center;
-      width: 70%;
-      height: 70%;
-    }
-  }
+  width: 600px;
+  height: 400px;
+  background-color: rgb(255, 217, 192);
+}
