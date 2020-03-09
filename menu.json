@@ -1,0 +1,72 @@
+{
+  "categories": [
+    {
+      "name": "kafedes",
+      "list": [
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"}
+        
+      ]
+    },
+    {
+      "name": "patsas",
+      "list": [
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"}
+      ]
+    },
+    {
+      "name": "keftedakia",
+      "list": [
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"},
+        {"item": "Item", "price": "00,00", "description": "Description"}
+      ]
+    }
+  ]
+}
