@@ -60,10 +60,12 @@ body {
   align-items: center;
 
   width: 300px;
+
+  animation: fadeIn 1s;
 }
 
 #info-container h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 #info-container div {
@@ -144,4 +146,15 @@ body {
   width: 600px;
   height: 400px;
   background-color: rgb(255, 217, 192);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

@@ -49,6 +49,8 @@ body {
   padding: 25px 0;
 
   font-size: 2.5rem;
+
+  animation: fadeIn 1s;
 }
 
 #categories-container {
@@ -70,6 +72,8 @@ body {
   margin: auto;
 
   border-bottom: 1px solid rgba(255, 217, 192, 0.2);
+
+  animation: fadeIn 1s;
 }
 
 #categories li {
@@ -183,7 +187,10 @@ body {
 #menu-container {
   width: 100%;
   max-width: 1000px;
+  min-height: 900px;
   margin: auto;
+
+  animation: fadeInUp 1s;
 }
 
 #menu-container div {
@@ -283,4 +290,28 @@ body {
   font-size: 0.8rem;
   font-weight: 900;
   color: #3F5362;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }

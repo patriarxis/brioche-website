@@ -64,11 +64,15 @@ body {
 #home div h1 {
   font-weight: 900;
   font-size: 3rem;
+
+  animation: fadeInLeft 1s;
 }
 
 #home div p {
   font-weight: 100;
   color: rgba(255, 217, 192, 0.7);
+
+  animation: fadeInLeft .8s;
 }
 
 #home div button {
@@ -84,6 +88,8 @@ body {
   font-weight: 900;
 
   transition: .15s ease-in;
+
+  animation: fadeInLeft .6s;
 }
 
 #home div button:hover {
@@ -102,4 +108,19 @@ body {
   place-self: center;
   width: 85%;
   height: 85%;
+}
+
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-200px, 0, 0);
+    transform: translate3d(-200px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }

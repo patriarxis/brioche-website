@@ -53,11 +53,15 @@ body {
 
 #delivery h1 {
   font-size: 2.5rem;
+
+  animation: fadeIn 1s;
 }
 
 #delivery p {
   width: 900px;
   text-align: center;
+
+  animation: fadeIn 1s;
 }
 
 #sites {
@@ -69,6 +73,14 @@ body {
 
 #sites a {
   position: relative;
+}
+
+#sites a:first-child {
+  animation: bounceInUp 1s;
+}
+
+#sites a:last-child {
+  animation: bounceInUp 1.1s;
 }
 
 #sites a img {
@@ -100,4 +112,67 @@ body {
   background-color: rgb(255, 217, 192);
   color: #3F5362;
   border-color: none;
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceInUp {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.115, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.115, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+
+  60% {
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
