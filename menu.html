@@ -8,11 +8,10 @@
   <link rel="stylesheet" href="resources/css/header.css">
   <link rel="stylesheet" href="resources/css/footer.css">
   <script src="resources/js/menu.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 
-  <section id="header"></section>
+  <section id="header" include="../components/header.html"></section>
 
   <section id="menu">
     <h1><strong>Menu</strong></h1>
@@ -51,13 +50,26 @@
     <span>Scroll to top</span>
   </button>
 
-  <section id="footer"></section>
+  <section id="footer" include="../components/footer.html"></section>
 
-  <script> 
-    $(function(){
-      $("#header").load("../components/header.html");
-      $("#footer").load("../components/footer.html");
-    });
+  <script>
+    function includeHTML(element) {
+      var file = element.getAttribute("include");
+      var xhttp = new XMLHttpRequest();
+
+      xhttp.onreadystatechange = function() {
+        if(this.readyState == 4) {
+          if(this.status == 200) {element.innerHTML = this.responseText;}
+          if(this.status == 404) {element.innerHTML = "Page not found.";}
+        }
+      }
+
+      xhttp.open("GET", file, true);
+      xhttp.send();
+    }
+
+    includeHTML(document.getElementById("header"));
+    includeHTML(document.getElementById("footer"));
   </script>
 
 </body>
