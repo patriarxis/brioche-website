@@ -56,6 +56,8 @@ window.addEventListener('load', ()=> {
 
       update();
 
+      scroll();
+
     });
 
     function update() {
@@ -113,11 +115,57 @@ window.addEventListener('load', ()=> {
       for(i=0; i<categoriesLength; i++) {
         for(j=0; j<listLength[i]; j++) {
           ITEM[k].innerHTML = list[i][j].item;
-          PRICE[k].innerHTML = list[i][j].price;
+          PRICE[k].innerHTML = list[i][j].price + " $";
           DESCRIPTION[k].innerHTML = list[i][j].description;
           k++;
         }
       }
     }
+
+    function scroll() {
+
+      let categoryNav = document.querySelectorAll("#categories li");
+    let categoryScroll = document.querySelectorAll("#menu-container div");
+    let categoryDropdown = document.querySelectorAll("#dropdown-list li");
+
+      var i = 0;
+
+      categoryScroll.forEach(function(element) {
+        if(i<6) {
+          categoryNav[i].addEventListener('click', function() {
+            element.scrollIntoView();
+          });
+        }
+        i++;
+      });
+
+      i = 0;
+
+      categoryScroll.forEach(function(element) {
+        if (i>5 && i<categoriesLength) {
+          categoryDropdown[i-6].addEventListener('click', function() {
+            element.scrollIntoView();
+          });
+        }
+        i++;
+      });
+
+
+      document.addEventListener("scroll", (e) => {
+
+        var scrolled = document.scrollingElement.scrollTop;
+
+        for(var i=0; i<6; i++){
+          if(scrolled > categoryScroll[i].offsetTop -60 && scrolled < categoryScroll[i+1].offsetTop - 60) {
+            categoryNav[i].classList.add('active');
+          } else {
+            categoryNav[i].classList.remove('active');
+          }
+        }
+
+      });
+
+    }
+    
 
 });
