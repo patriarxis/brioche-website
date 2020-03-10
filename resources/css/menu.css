@@ -37,7 +37,7 @@ html, body {
 
 body {
   display: grid;
-  grid-template-rows: 100px auto 100px;
+  grid-template-rows: 100px auto 100px 100px;
 }
 
 #menu {
@@ -211,6 +211,8 @@ body {
   border-radius: 3px;
 
   padding: 15px;
+
+  transition: .1s ease;
 }
 
 #menu-container div ul li:hover {
@@ -233,4 +235,52 @@ body {
 
   font-size: 0.8rem;
   color: rgba(255, 217, 192, 0.7);
+}
+
+#scroll-to-top {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 50px;
+  place-items: center;  
+
+  place-self: center;
+  position: sticky;
+  bottom: -50px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  height: 50px;
+  width: 200px;
+  padding: 0 20px;
+
+  border-radius: 5px;
+  background-color: rgb(255, 217, 192);
+
+  transition: .3s ease-in-out;
+}
+
+#scroll-to-top:hover {
+  background-color: rgb(255, 240, 231);
+}
+
+#scroll-to-top.scroll-btn {
+  visibility: visible;
+  bottom: 20px;
+  opacity: 1;
+}
+
+#scroll-to-top div {
+  border: solid #3F5362;
+  border-width: 0 3px 3px 0;
+  padding: 4px;
+
+  transform: translate(0, 25%) rotate(225deg);
+  -webkit-transform: translate(0, 25%) rotate(225deg);
+}
+
+#scroll-to-top span {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #3F5362;
 }

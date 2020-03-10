@@ -55,7 +55,6 @@ window.addEventListener('load', ()=> {
       }
 
       update();
-
       scroll();
 
     });
@@ -125,8 +124,8 @@ window.addEventListener('load', ()=> {
     function scroll() {
 
       let categoryNav = document.querySelectorAll("#categories li");
-    let categoryScroll = document.querySelectorAll("#menu-container div");
-    let categoryDropdown = document.querySelectorAll("#dropdown-list li");
+      let categoryScroll = document.querySelectorAll("#menu-container div");
+      let categoryDropdown = document.querySelectorAll("#dropdown-list li");
 
       var i = 0;
 
@@ -151,6 +150,8 @@ window.addEventListener('load', ()=> {
       });
 
 
+      let scrollToTop = document.getElementById("scroll-to-top");
+
       document.addEventListener("scroll", (e) => {
 
         var scrolled = document.scrollingElement.scrollTop;
@@ -163,9 +164,20 @@ window.addEventListener('load', ()=> {
           }
         }
 
+
+        if(scrolled > categoryScroll[0].offsetTop -60) {
+          scrollToTop.classList.add("scroll-btn");
+        } else {
+          scrollToTop.classList.remove("scroll-btn");
+        }
+
       });
 
+      scrollToTop.addEventListener('click', function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      })
+
     }
-    
 
 });
