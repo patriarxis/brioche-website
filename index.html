@@ -10,7 +10,18 @@
 </head>
 <body>
 
-  <section id="header" include="components/header.html"></section>
+  <header id="header">
+    <a href="/index.html" id="logo">
+      <img src="resources/images/icons/part-logo.svg" alt="">
+      <span>BRIOCHE <br> SHOP</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="delivery.html">Delivery</a>
+      <a href="info.html">Info</a>
+    </nav>
+  </header>
 
   <section id="home">
     <div>
@@ -28,27 +39,28 @@
     <img src="resources/images/illustrations/home.svg" alt="">
   </section>
 
-  <footer id="footer" include="components/footer.html"></footer>
-
-  <script>
-    function includeHTML(element) {
-      var file = element.getAttribute("include");
-      var xhttp = new XMLHttpRequest();
-
-      xhttp.onreadystatechange = function() {
-        if(this.readyState == 4) {
-          if(this.status == 200) {element.innerHTML = this.responseText;}
-          if(this.status == 404) {element.innerHTML = "Page not found.";}
-        }
-      }
-
-      xhttp.open("GET", file, true);
-      xhttp.send();
-    }
-
-    includeHTML(document.getElementById("header"));
-    includeHTML(document.getElementById("footer"));
-  </script>
+  <footer id="footer">
+    <div id="social">
+      <a href="https://www.facebook.com/Brioche-803275226683135/">
+        <img src="resources/images/icons/facebook.svg" alt="">
+      </a>
+      <a href="https://www.instagram.com/brioche__shop/">
+        <img src="resources/images/icons/instagram.svg" alt="">
+      </a>
+    </div>
+    <div id="support">
+      <div>
+        <img src="resources/images/icons/phone.svg" alt="">
+        <span>254 118 1818</span>
+      </div>
+      <div>
+        <img src="resources/images/icons/email.svg" alt="">
+        <span>example@email.com</span>
+      </div>
+    </div>
+    <hr>
+    <span id="copyright">Brioche Shop 2020 | All rights reserved ©</span>    
+  </footer>
 
 </body>
 </html>
