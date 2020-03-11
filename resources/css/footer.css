@@ -16,6 +16,10 @@
   align-items: center;
 }
 
+#footer #social a {
+  font-size: 0;
+}
+
 #footer #social a img {
   height: 28px;
   width: 28px;
