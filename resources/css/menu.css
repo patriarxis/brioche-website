@@ -264,6 +264,8 @@ body {
   border-radius: 5px;
   background-color: rgb(255, 217, 192);
 
+  cursor: pointer;
+
   transition: .3s ease-in-out;
 }
 
