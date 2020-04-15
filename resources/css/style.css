@@ -107,7 +107,8 @@ body {
 #home img {
   place-self: center;
   width: 85%;
-  height: 85%;
+  max-width: 700px;
+  min-width: 550px;
 }
 
 

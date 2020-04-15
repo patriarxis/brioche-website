@@ -122,9 +122,12 @@ body {
   color: #3F5362;
 }
 
-#info img {
+#buildings {
   align-self: center;
-  width: 700px;
+  margin-bottom: 70px;
+  width: 85%;
+  max-width: 700px;
+  min-width: 550px;
 }
 
 #schedule {
