@@ -115,7 +115,11 @@ window.addEventListener('load', ()=> {
         for(j=0; j<listLength[i]; j++) {
           ITEM[k].innerHTML = list[i][j].item;
           PRICE[k].innerHTML = list[i][j].price + " $";
-          DESCRIPTION[k].innerHTML = list[i][j].description;
+          if (list[i][j].description !== '') {
+            DESCRIPTION[k].innerHTML = list[i][j].description;
+          } else {
+            DESCRIPTION[k].remove();
+          }
           k++;
         }
       }
